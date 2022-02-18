@@ -23,5 +23,8 @@ js, _ := av.ToJSON(av)
 ```
 From JSON:
 ```go
-
+av1, err = av.FromJSON(js, &Mytest{})
+if err != nil {
+    t.Fatalf("error occurred: %s", err)
+}
 ```
